@@ -37,7 +37,27 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.reset-button {
+.game-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.difficulty-display {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.reset-button,
+.new-game-button {
   padding: 0.75rem 2rem;
   font-size: 1.125rem;
   font-weight: 600;
@@ -50,14 +70,91 @@
   box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
 }
 
-.reset-button:hover {
+.reset-button:hover,
+.new-game-button:hover {
   background-color: #2563eb;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(59, 130, 246, 0.4);
 }
 
-.reset-button:active {
+.reset-button:active,
+.new-game-button:active {
   transform: translateY(0);
+}
+
+.mode-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: fade-in 0.5s ease-in;
+}
+
+.mode-selection h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mode-button,
+.difficulty-button,
+.start-button,
+.back-button {
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+  min-width: 250px;
+}
+
+.mode-button:hover,
+.difficulty-button:hover,
+.start-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(59, 130, 246, 0.4);
+}
+
+.difficulty-button {
+  background-color: #6366f1;
+}
+
+.difficulty-button:hover {
+  background-color: #4f46e5;
+}
+
+.difficulty-button.selected {
+  background-color: #22c55e;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.3);
+}
+
+.difficulty-button.selected:hover {
+  background-color: #16a34a;
+}
+
+.start-button {
+  background-color: #22c55e;
+  margin-top: 1rem;
+}
+
+.start-button:hover {
+  background-color: #16a34a;
+}
+
+.back-button {
+  background-color: #64748b;
+  min-width: 150px;
+}
+
+.back-button:hover {
+  background-color: #475569;
 }
 
 @keyframes fade-in {
