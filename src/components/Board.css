@@ -1,0 +1,81 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  animation: fade-in 0.5s ease-in;
+}
+
+.game-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.status {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  min-height: 2rem;
+  animation: slide-down 0.3s ease-out;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 8px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #e0e7ff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.reset-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(59, 130, 246, 0.4);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
